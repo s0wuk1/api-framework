@@ -1,0 +1,21 @@
+goods:
+  - goods_id: 65
+    item_id: 122
+    goods_num: 1
+    expected_status: 0
+
+  - goods_id: 65
+    item_id: 122
+    goods_num: 2
+    expected_status: 0
+
+  - goods_id: 65
+    item_id: 122
+    goods_num: 3
+    expected_status: 0
+login:
+  username: 17763727177
+  password: 123456
+
+order:
+  address_id: 829

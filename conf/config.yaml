@@ -1,0 +1,26 @@
+# 环境配置
+env:
+  base_url: "http://localhost"
+# 登录接口
+login:
+  path: "/index.php?m=Home&c=User&a=do_login"
+# 购物车接口
+cart:
+  add_path: "/index.php?m=Home&c=Cart&a=ajaxAddCart"
+  update_path: "/Home/Cart/AsyncUpdateCart.html"
+  delete_path: "/Home/Cart/delete.html"
+#订单接口
+order:
+  submit_path: "/Home/Cart/cart3.html"
+  detail_path: "/index.php?m=Home&c=Order&a=order_detail"
+# 登录测试数据
+accounts:
+  - username: "17763727177"
+    password: "123456"
+    expect_status: 1
+    expect_msg: "登陆成功"
+
+  - username: "15669081493"
+    password: "123456"
+    expect_status: 1
+    expect_msg: "登陆成功"
