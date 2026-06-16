@@ -24,4 +24,4 @@ jobs:
 
       - name: Run Smoke Test
         run: |
-          PYTHONPATH=. pytest smoke/test_login.py
+          PYTHONPATH=. pytest smoke/test_ci.py
