@@ -22,6 +22,8 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run Smoke Pytest
-        run: |
-          pytest smoke/test_login.py
+      - - name: Run Smoke Test
+          env:
+            PYTHONPATH: .
+          run: |
+            pytest smoke/test_login.py
