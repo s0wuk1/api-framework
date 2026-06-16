@@ -24,4 +24,4 @@ jobs:
 
       - name: Run Smoke Pytest
         run: |
-          pytest testcases/test_smoke.py
+          pytest smoke/test_login.py

@@ -3,7 +3,6 @@ from api.login_api import LoginApi
 
 login_api = LoginApi()
 
-
 @pytest.mark.smoke
 def test_login():
     res = login_api.login(
