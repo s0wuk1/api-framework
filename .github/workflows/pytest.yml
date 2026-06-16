@@ -22,6 +22,12 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run Smoke Test
+      - name: Run Test
         run: |
-          PYTHONPATH=. pytest smoke/test_ci.py
+          PYTHONPATH=. pytest smoke/test_ci.py --alluredir=allure-results
+
+      - name: Upload Allure Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
