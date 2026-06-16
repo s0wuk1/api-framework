@@ -26,8 +26,14 @@ jobs:
         run: |
           PYTHONPATH=. pytest smoke/test_ci.py --alluredir=allure-results
 
-      - name: Upload Allure Results
-        uses: actions/upload-artifact@v4
+      - name: Generate Allure Report
+        uses: simple-elf/allure-report-action@master
         with:
-          name: allure-results
-          path: allure-results
+          allure_results: allure-results
+          allure_report: allure-report
+
+      - name: Deploy Report To GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
