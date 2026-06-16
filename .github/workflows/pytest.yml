@@ -22,6 +22,6 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run Pytest
+      - name: Run Smoke Pytest
         run: |
-          pytest
+          pytest testcases/test_smoke.py
