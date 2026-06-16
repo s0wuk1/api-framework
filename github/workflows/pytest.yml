@@ -1,14 +1,14 @@
 name: API Test
 
 on:
-push:
-branches:
-- main
+  push:
+    branches:
+      -main
+
 jobs:
 pytest:
 runs-on: ubuntu-latest
 
-```
 steps:
   - name: Checkout Code
     uses: actions/checkout@v4
@@ -25,4 +25,3 @@ steps:
   - name: Run Pytest
     run: |
       pytest
-```
